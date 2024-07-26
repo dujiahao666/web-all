@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+<!--配置servlet类，并起一个别名
+  servlet-class  告诉Tomcat对应的要实例化的Servlet对应的要实例化的Serelet类
+  servlet-name  用于关联请求的映射路径
+  -->
+
+    <servlet>
+        <servlet-name>gagaga</servlet-name>
+        <servlet-class>com.atguigu.servlet.UserServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>gagaga</servlet-name>
+        <url-pattern>/aaa</url-pattern>
+        <url-pattern>/bbb</url-pattern>
+        <url-pattern>*.asd</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>sdsd</servlet-name>
+        <servlet-class>com.atguigu.servlet.ServeltLiftCyte</servlet-class>
+        <load-on-startup>3</load-on-startup>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sdsd</servlet-name>
+        <url-pattern>/lll.html</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>

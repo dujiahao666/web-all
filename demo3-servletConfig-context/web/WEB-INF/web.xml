@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <context-param>
+        <param-name>name</param-name>
+        <param-value>du</param-value>
+    </context-param>
+    <context-param>
+        <param-name>age</param-name>
+        <param-value>21</param-value>
+    </context-param>
+
+    
+    <servlet>
+        <servlet-name>Servlet1</servlet-name>
+        <servlet-class>com.jiajia.Servlet1</servlet-class>
+<!--        <load-on-startup>7</load-on-startup>-->
+<!--        配置servlet的初始参数 -->
+
+        <init-param>
+            <param-name>keyA</param-name>
+            <param-value>valueA</param-value>
+        </init-param>
+        <init-param>
+            <param-name>keyB</param-name>
+            <param-value>valueB</param-value>
+        </init-param>
+<!--         可以写多个init-param，可以被tomcat所读取到，以对象的形式进行存储       -->
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Servlet1</servlet-name>
+        <url-pattern>/servlet1</url-pattern>
+    </servlet-mapping>
+
+
+
+
+    <servlet>
+        <servlet-name>Serv2</servlet-name>
+        <servlet-class>com.jiajia.Serv2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Serv2</servlet-name>
+        <url-pattern>/ss</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+
+    
+</web-app>
+
